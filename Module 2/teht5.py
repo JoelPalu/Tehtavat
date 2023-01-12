@@ -1,16 +1,21 @@
-print("Lasken kolmen(3) luvun summan, tulon ja keskiarvon sulle!")
+luoti = 13.3
+naula = 32*luoti
+leiviska = 20*naula
 
-#Pyytää numerot
-num1_input = input("Anna ensinmmäinen numero: ")
-num2_input = input("Anna toinen numero: ")
-num3_input = input("Anna kolmas numero: ")
+leiviska_input = input("Anna leiviskä määrä: ")
+naula_input = input("Anna naula määrä: ")
+luoti_input = input("Anna luoti määrä: ")
 
-#Muuttaa inputit numeroiksi
-num1 = float(num1_input)
-num2 = float(num2_input)
-num3 = float(num3_input)
+leiviska_maara = int(leiviska_input)
+naula_maara = int(naula_input)
+luoti_maara = int(luoti_input)
 
-#Lasku menetelmät
-print("Numeroiden summa on: ", num1 + num2 + num3)
-print("Numeroiden tulo on: ", num1 * num2 * num3)
-print("Numeroiden keskiarvo on: ", (num1 + num2 + num3)/3 )
+
+#kokonais paino grammoinna
+total_weight = leiviska_maara*leiviska + naula_maara*naula + luoti_maara*luoti
+
+#Lasketan kilot ja grammat erilleen
+kilogramms = int(f"{total_weight / 1000 :10.0f}")
+gramms = float(f"{total_weight-kilogramms*1000:.5f}")
+
+print(f"Kokonainen massa on: {kilogramms} kilogrammaa ja {gramms} grammaa" )
