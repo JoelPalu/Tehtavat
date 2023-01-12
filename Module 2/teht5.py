@@ -15,7 +15,8 @@ luoti_maara = int(luoti_input)
 total_weight = leiviska_maara*leiviska + naula_maara*naula + luoti_maara*luoti
 
 #Lasketan kilot ja grammat erilleen
-kilogramms = int(f"{total_weight / 1000 :10.0f}")
+kilogramms = int(total_weight / 1000)
+print(kilogramms)
 gramms = float(f"{total_weight-kilogramms*1000:.5f}")
 
 print(f"Kokonainen massa on: {kilogramms} kilogrammaa ja {gramms} grammaa" )
