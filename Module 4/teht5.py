@@ -1,6 +1,5 @@
 the_user = "python"
 the_password = "rules"
-total_tries = 5
 tries = 0
 status= False
 end = "Block"

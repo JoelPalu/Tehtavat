@@ -1,5 +1,4 @@
 status = True
-
 a = 0
 list = []
 while status == True:
@@ -18,6 +17,5 @@ while a < len(list):
     if num >= large:
         large = num
     a = a + 1
-
 
 print(f"Isoin numero on: {large} ja pienin numero on: {small}")
