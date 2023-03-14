@@ -26,7 +26,6 @@ cars = []
 for n in range(1,11):
     car = Auto("ABC-"+str(n),random.randint(100,200))
     cars.append(car)
-
 while True:
     for car in cars:
         car.acceleration(random.randint(-10,15))
@@ -38,5 +37,4 @@ while True:
 
 
 for car in cars:
-    fs = "|{reg:^{w}}|{top:^{w}}|{speed:^{w}}|{traveled:^{w}}|".format(reg = car.register, top = car.topspeed, speed = car.speed, traveled = car.traveled, w = 10)
-    print(fs)
+    print(f"|{car.register:^{10}}|{car.topspeed:^{10}}|{car.speed:^{10}}|{car.traveled:^{10}}|")
