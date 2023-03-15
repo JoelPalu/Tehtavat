@@ -13,7 +13,7 @@ class Auto:
 
         if self.speed >= self.topspeed:
             self.speed = self.topspeed
-        elif speed < 0:
+        elif self.speed < 0:
             self.speed = 0
 
     def travel(self, hour):
@@ -26,12 +26,19 @@ cars = []
 for n in range(1,11):
     car = Auto("ABC-"+str(n),random.randint(100,200))
     cars.append(car)
-while True:
+
+game= True
+while game == True:
     for car in cars:
-        car.acceleration(random.randint(-10,15))
-        car.travel(1)
-    if car.traveled > 10000:
-        break
+        if car.traveled > 10000:
+            game = False
+            break
+        else:
+            car.acceleration(random.randint(-10,15))
+            car.travel(1)
+
+
+
 
 
 
