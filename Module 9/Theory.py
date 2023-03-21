@@ -1,6 +1,6 @@
-s1 ="yep"
-s2 = "cock"
-s3 = "oo"
-s4 = "wdada"
+import random
+car = 0
+for n in range(20):
+    car += random.randint(-10, 15)
+    print(car)
 
-print(f"|{s1:^20}|{s2:^20}|{s3:^20}|{s4:^20}|")
